@@ -13,4 +13,5 @@
 #include <functional>
 #include <random>
 #include <array>
+#include <SDL.h>
 #endif /* HEADERS_H */

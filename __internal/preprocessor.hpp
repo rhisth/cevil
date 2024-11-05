@@ -1,6 +1,7 @@
 ﻿/* ---Do not change anything--- */
 #ifndef PREPROCESS_H
 #define PREPROCESS_H
+#define _CRT_SECURE_NO_WARNINGS
 #if !defined(__cplusplus)
 #error C++ is required.
 #elif __cplusplus <= 201103L

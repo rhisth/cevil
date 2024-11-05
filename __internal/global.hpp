@@ -12,7 +12,14 @@ constexpr struct {
 	cstr_t net = "NET";
 } _module;
 namespace gl {
-	_iobuf* logfile;
+	_iobuf* logfile = []() {
+		_iobuf* file = fopen("../stacktrace.log", "a");
+		if (!file) {
+			file = nullptr;
+			perror("---Couldn't open \"stacktrace.log\"---");
+		}
+		return file;
+	}.operator()();
 	constinit uint16_t fps = 60;
 	constexpr std::array<uint32_t, 256> CRC_table = [](void) {
 		uint32_t CRC;
