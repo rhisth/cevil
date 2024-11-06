@@ -1,0 +1,5 @@
+﻿__game
+.vs/
+out/
+tmp/
+CMakeSettings.json
